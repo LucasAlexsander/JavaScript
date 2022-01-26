@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio DOM input</title>
+
+    <style>
+        pre {
+            font-size: 16px;
+        }
+        input {
+            outline: none;
+            border-radius: 0.25rem;
+            border: 1px solid black;
+            padding: 4px;
+            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio DOM Input:</h1>
+    <pre>
+        1) Crie um campo <b>&lt;input type="text"&gt;</b> e aplique os seguintes controles com base nos eventos abaixo:
+            • No evento de foco modifique o background do input para amarelo.
+            • Quando o campo perder o foco, recupere o seu respectivo valor e:
+            o Caso o conteúdo contido no campo tenha menos de 3 caracteres o mesmo deve ter seu background alterado para vermelho.
+            o Caso o conteúdo contido no campo tenha 3 caracteres ou mais o background
+            deve ser alterado para verde.
+    </pre>
+
+    <hr>
+
+    <input onblur="RevertendoFundo('0')" onfocus="ModificarFundo('0')" type="text" placeholder="Entre com seu nome">
+
+    <input onblur="RevertendoFundo('1')" onfocus="ModificarFundo('1')" type="password" id="teste" placeholder="Entre com sua senha">
+
+    <input onblur="RevertendoFundo('2')" onfocus="ModificarFundo('2')" type="text" placeholder="Entre com seu e-mail">
+
+    <script src="js/desafioDomInput.js"></script>
+</body>
+</html>

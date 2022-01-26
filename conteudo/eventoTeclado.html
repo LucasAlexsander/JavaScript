@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento</title>
+    <style>
+        div {
+            text-align: center;
+            text-decoration: underline;
+        }
+        .cursor {
+            cursor: pointer;            
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tema teclado:</h1>
+
+    <div class="container" style="display: flex; justify-content: space-around;">
+
+        <input onkeydown="onkeydownAction()" class="cursor" type="text" style="background: #ccc; height: 150px; width: 150px;">
+        <input onkeypress="onkeypressAction()" class="cursor" type="text" style="background: #Fcc; height: 150px; width: 150px;">
+        <input onkeyup="onkeyupAction()" class="cursor" type="text" style="background: #cFc; height: 150px; width: 150px;">
+
+    </div>
+    
+ <script src="js/eventoTeclado.js"></script>
+</body>
+</html>

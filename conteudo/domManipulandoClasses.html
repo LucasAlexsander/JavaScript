@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        .estilo1 {
+            background: grey;
+            color: white;
+        }
+
+        .estilo2 {
+            background: grey;
+            color: white;
+            width: 300px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+        }
+    </style>
+
+</head>
+<body style="position: absolute; top: 10%; left: 40%;">
+    <h1>Manipulando classes</h1>
+    
+    <p id="mensagem" class="estilo1">Texto para ser modificado!</p>
+
+    <br>
+
+    <button onclick="modificarEstilo()" >Aplicar modificação</button>
+
+    <script src="js/domManipulandoClasses.js"></script>
+</body>
+</html>

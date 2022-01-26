@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento</title>
+    <style>
+        div {
+            text-align: center;
+            text-decoration: underline;
+        }
+        .cursor {
+            cursor: pointer;            
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body onresize="console.log('Evento disparado')" style="height: 1000px;">
+    <h1>Tema teclado:</h1>
+
+    <div onscroll="console.log('Evento funciondo')" class="container" style="display: flex; justify-content: space-around; padding: 30px; overflow-y: scroll; height: 400px; background: red;">
+
+        <div class="cursor" type="text" style="background: #ccc; height: 1500px; width: 500px;"></div>
+
+    </div>
+    
+ <script src="js/eventoTeclado.js"></script>
+</body>
+</html>
