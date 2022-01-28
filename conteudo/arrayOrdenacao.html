@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Array Ordenação:</h1>
+
+    <script>
+        var listaCoisas = []
+        listaCoisas['frutas'] = ['Maça', 'Banana', 'Uva', 'Pera']
+        listaCoisas['numeros'] = [2, 42, 834, 4]
+
+        document.write('Valores na ordem original: <br>')
+        document.write('Lista de Frutas: ', listaCoisas['frutas'], '<br>')
+        document.write('Lista de número: ', listaCoisas['numeros'], '<br>')
+
+        function ordenaNumeros (a, b) {
+            return a - b //Se < 0 = A ordenado antes de B | > 0 = B ordenado antes de A | == a ordem se mantém
+        }
+
+        document.write('<hr>Odenando os valores: <br>')
+
+        document.write('Lista de Frutas: ', listaCoisas['frutas'].sort(), '<br>')
+        document.write('Lista de número: ', listaCoisas['numeros'].sort(ordenaNumeros), '<br>')               
+    </script>
+</body>
+</html>
