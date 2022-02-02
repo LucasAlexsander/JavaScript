@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>    
+</head>
+<body>
+    <h1>BOM Window</h1>
+
+    <button onclick="abrirPopUp()">Abrir Janela</button>
+    <button onclick="fecharPopUp()">Fechar Janela</button>
+    <button onclick="window.print()">Imprmir</button>
+
+    <h1>BOM Screen</h1>
+    <p id="texto1"></p>
+    <p id="texto2"></p>
+
+    <h1>BOM Location</h1>
+    <button onclick="acessarSite('google')">Ir para o site do Google</button>
+    <button onclick="acessarSite('facebook')">Ir para o site do Facebook</button>
+
+    <h1>BOM Timming</h1>
+    <p id="texto3">Timeout: </p>
+    <p id="texto4">Interval: </p>
+
+    <script>
+        var janela
+
+        function abrirPopUp() {
+            janela = window.open('https://www.w3schools.com/jsref/obj_window.asp#:~:text=Window%20Object%20Methods', 'Nova-Janela', 'width=800, height=600')
+        }
+
+        function fecharPopUp() {
+            janela.close()
+        }
+
+
+        var altura = window.screen.availHeight
+        var largura = window.screen.availWidth
+
+        document.getElementById("texto1").innerHTML = "A altura máxima que o navegador pode chegar sem a barra de navegação é de " + altura + "px"
+        document.getElementById("texto2").innerHTML = "A largura máxima que o navegador pode chegar sem a barra de navegação é de " + largura + "px"
+
+
+        function acessarSite(site) {
+            window.location.href = 'https://www.'+ site + '.com'
+        }
+
+
+
+
+        var num = 1;
+        var min = 0;
+        var hor = 0;
+
+        function textTiming(id) {
+            if (num === 60) {
+                min ++
+                num = 0
+            }
+            if (min === 60) {
+                hor ++
+                min = 0
+            }
+            document.getElementById(id).innerHTML = 'Tempo online: ' + hor + ":" + min + ":" + num + '.';
+            num++;
+        }
+
+        setTimeout(function () {document.getElementById("texto3").innerHTML += "Tempo iniciado"}, 500)
+
+        var x = setInterval(function () {textTiming("texto4")}, 1000)
+
+        /* Vai parar quando der 10s */
+        setTimeout(function () {clearInterval(x); 
+            var aux = document.getElementById("texto3").innerHTML;
+            aux = aux.replace('Tempo iniciado', 'Tempo parado')
+            console.log(aux)
+            document.getElementById("texto3").innerHTML = aux
+        }, 10000)
+            
+
+        /* setTimeout (function () {
+            var aux = document.getElementById("texto3").innerHTML;
+            aux = aux.replace('Tempo iniciado', 'Tempo parado')
+            console.log(aux)
+        }, 4000) */
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

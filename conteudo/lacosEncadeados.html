@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laço Encadeados</title>
+</head>
+<body>
+    <h1>Laço Encadeados:</h1>
+
+    <h3>Tabuada até o 10</h3>
+
+        <script>
+            for (var lin = 1; lin <= 10; lin ++) {
+                document.write('Tabuada do ', lin, ':<br>')
+                for (var col = 1; col <= 10; col ++) {
+                    document.write(lin , ' x ', col, ' = ', lin*col)
+                    if (col != 10) {
+                        document.write(' | ')
+                    }
+                }
+                document.write('<br><br>')
+            }
+        </script>
+</body>
+</html>

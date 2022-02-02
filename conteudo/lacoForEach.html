@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laço ForEach</title>
+</head>
+<body>
+    <h1>Laço ForEach:</h1>
+
+    <script>
+        var tamanho = 0
+        var lista_convidados = ['Barbara', 'Jamilton', 'Jhon', 'Amanda', 'Lucas']
+
+        console.log(lista_convidados)
+        var f = (function(valor, indice, array) {
+            
+            if (valor === 'Lucas') {
+                array[indice] = 'Novo valor'
+                document.write('Valor do índice ', indice, ' alterado com sucesso.<br>')
+            }
+            document.write('Índice: ', indice, '. Valor: ', valor, '<br>')
+        })
+
+        document.write('Antes: <br>')
+        lista_convidados.forEach(f)
+        document.write('<hr>Depois: <br>')
+        lista_convidados.forEach(f)
+
+        console.log(lista_convidados)
+    </script>
+</body>
+</html>

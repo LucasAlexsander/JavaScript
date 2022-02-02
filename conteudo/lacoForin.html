@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laço Forin</title>
+</head>
+<body>
+    <h1>Laço Forin:</h1>
+
+    <script>
+        var tamanho = 0
+        var lista_convidados = []
+        lista_convidados['kas'] = 'Barbara'
+        lista_convidados[23] = 'Jamilton'
+        lista_convidados[-1] = 'Jhon'
+        lista_convidados[20.3] = 'Amanda'
+        lista_convidados[true] = 'Lucas'
+
+        console.log(lista_convidados)
+
+        for ( var x in lista_convidados) {
+            console.log('Índice: ', x , ' | Valor: ', lista_convidados[x])
+            document.write('Índice: ', x , ' | Valor: ', lista_convidados[x], '<br>')
+            tamanho++
+        }
+        document.write('O array tem um tamanho de ', tamanho, ' dados.<br>')
+    </script>
+</body>
+</html>
